@@ -4,6 +4,7 @@
   "description": "",
   "main": "mongodb.js",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
@@ -14,9 +15,11 @@
     "sharp": "^0.30.3",
     "validator": "^13.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  },
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
